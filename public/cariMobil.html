@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css"
+    />
+    <link rel="stylesheet" href="css/carimobilstyle.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/flickity.css" />
+    <title>Rental Mobil - Noviyana</title>
+  </head>
+  <body>
+    <!--header website-->
+    <header>
+      <!--navbar-->
+      <nav id="navbar-scroll" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img src="images/LandingPage/logo.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            aria-controls="offcanvasExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-pills ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="#our-service__section"
+                  >Our Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#why-us__section">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimoni__section">Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq__section">FAQ</a>
+              </li>
+              <li>
+                <button class="btn btn-success ms-2 fw-bold">Register</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--end navbar-->
+
+      <!--off canvass-->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">
+            BCR
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#our-service__section" class="nav-link">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#why-us__section" class="nav-link">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimoni__section" class="nav-link">Testimony</a>
+            </li>
+            <li class="nav-item">
+              <a href="#faq__section" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-success fw-bold btn-offcanvas">
+                Register
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end off canvas-->
+
+      <!--Jumbotron-->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-lg-5 col-md-5 col-sm-12 col-xs-12 jumbotron-kiri me-4"
+              data-aos="fade-down"
+            >
+              <h1 class="fw-bold">
+                Sewa & Rental Mobil Terbaik di kawasan Bangka Belitung
+              </h1>
+              <p>
+                Selamat datang di Binar Car Rental. Kami menyediakan mobil
+                kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+                kebutuhanmu untuk sewa mobil selama 24 jam.
+              </p>
+            </div>
+            <div
+              class="col jumbotron-kanan"
+              data-aos="fade-left"
+              data-aos-delay="500"
+            >
+              <img
+                src="images/LandingPage/img_car.png"
+                width="100%"
+                class="img-banner"
+              />
+
+              <!-- <img src="assets/images/car.png" width="100%" alt="" class="img-banner"> -->
+              <!-- <div class="box-banner"></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end jumbotron-->
+    </header>
+    <main>
+      <section id="section1-card">
+        <div class="container">
+          <div class="card card-cari-mobil">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Tipe Driver</label>
+                      <div class="input-group">
+                        <select
+                          class="form-select"
+                          id="driver-type"
+                          aria-label="Example select with button addon"
+                        >
+                          <option selected>Pilih Tipe Driver</option>
+                          <option value="dengansopir">
+                            <p>Dengan Sopir</p>
+                          </option>
+                          <option value="tanpasopir">
+                            <p>Tanpa Sopir (Lepas Kunci)</p>
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="date">Tanggal</label>
+                      <!--
+                        
+                      -->
+                      <div class="input-group" id="datepicker">
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="tanggal"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label>Waktu Jemput/Ambil</label>
+                      <div class="input-group">
+                        <select
+                          class="form-select"
+                          id="time"
+                          aria-label="Example select with button addon"
+                        >
+                          <option selected>Pilih Waktu</option>
+                          <option value="08:00:00">08.00 WIB</option>
+                          <option value="09:00:00">09.00 WIB</option>
+                          <option value="10:00:00">10.00 WIB</option>
+                          <option value="11:00:00">11.00 WIB</option>
+                          <option value="12:00:00">12.00 WIB</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label>Jumlah Penumpang (optional) </label>
+                      <div class="input-group mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="passenger-value"
+                          placeholder="Jumlah Penumpang"
+                          aria-label="Username"
+                          aria-describedby="basic-addon1"
+                        />
+                        <span class="input-group-text">
+                          <i class="fa-solid fa-user"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col text-center button-cari">
+                  <button id="search-btn" class="btn btn-success fw-bold">
+                    Cari Mobil
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-2">
+        <!-- start alert -->
+        <div id="not-found"></div>
+        <!-- end alert -->
+
+        <div class="container">
+          <div class="car-list">
+            <div class="row mt-3" id="car-container"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--end header-->
+
+    <!--footer-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 footer-col">
+            <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+            <p>binarcarrental@gmail.com</p>
+            <p>081-233-334-808</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 footer-col">
+            <a class="d-block link-footer">Our Sevices</a>
+            <a class="d-block link-footer">Why Us</a>
+            <a class="d-block link-footer">Testimonial</a>
+            <a class="d-block link-footer">FAQ</a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 footer-col">
+            <p>Connect with us</p>
+            <div class="icon">
+              <a href="#"
+                ><img
+                  src="images/LandingPage/icon_facebook.png"
+                  alt="icon-facebook"
+                  width="32px"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/LandingPage/icon_instagram.png"
+                  alt="icon-instagram"
+                  width="32px"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/LandingPage/icon_twitter.png"
+                  alt="icon-twitter"
+                  width="32px"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/LandingPage/icon_mail.png"
+                  alt="icon-mail"
+                  width="32px"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/LandingPage/icon_twitch.png"
+                  alt="icon-twitch"
+                  width="32px"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 footer-col">
+            <p>Copyright Binar 2022</p>
+            <img src="images/LandingPage/logo.png" alt="logo" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <script type="text/javascript" src="scripts/binar.js"></script>
+    <script type="text/javascript" src="scripts/component.js"></script>
+    <script type="text/javascript" src="scripts/car.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+
+    <script src="scripts/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="scripts/script.js"></script>
+    <script>
+      $("#tgl").datepicker({
+        format: "mm/dd/yyyy",
+        startDate: "-3d",
+      });
+    </script>
+  </body>
+</html>
